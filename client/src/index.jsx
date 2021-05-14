@@ -4,4 +4,4 @@ import App from './components/App.jsx';
 
 //TODO
 
-ReactDOM.render(<App />, document.getElementById('app'));
+ReactDOM.render(<App something='foo'/>, document.getElementById('app'));

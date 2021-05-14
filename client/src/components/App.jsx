@@ -13,8 +13,8 @@ import Favorites from './Favorites.jsx';
 import dummy from '../../../public/data/dummy.js';
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.state = {
       drinks: [],
       favorites: []
