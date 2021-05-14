@@ -19,3 +19,33 @@
 //     </div>
 //   </div>
 // </div>
+
+import React from 'react';
+
+var Favorites = (props) => {
+  if (props.favorites.length === 0) {
+    return (
+      <div>No Favorites</div>
+    )
+  } else {
+    return (
+      <div>
+        <h3>Favorites</h3>
+        <div className = 'favoritesList'>
+          {props.favorites.map((drink, index) => (
+            <div className = 'favorite' key = {index} onClick = {() => {
+              props.removeFavorite(drink)
+            }}>
+              <h4>{drink.strDrink}</h4>
+              <div className = "imgDiv">
+                <img src = {drink.strDrinkThumb}/>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    )
+  }
+}
+
+export default Favorites;
