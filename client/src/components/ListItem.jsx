@@ -1,8 +1,14 @@
-//TODO
+import React from 'react';
 
-{/* <div class = "listItem" id = {id}>
-  <h4>Drink Name</h4>
-  <div class = "imgDiv">
-    <img src = {img source}/>
-  </div>
-</div> */}
+var ListItem = (props) => {
+  return (
+    <div id={props.drink.idDrink}>
+      <h4>{props.drink.strDrink}</h4>
+      <div className="imgDiv">
+        <img src={props.drink.strDrinkThumb} onClick={drink => {props.onClick(props.drink)}}/>
+      </div>
+    </div>
+  );
+}
+
+export default ListItem;

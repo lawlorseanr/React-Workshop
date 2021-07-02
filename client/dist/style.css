@@ -27,3 +27,11 @@
 .imgDiv img {
   width: 100%;
 }
+
+.showFavorites {
+  display: inline;
+}
+
+.noFavorites {
+  display: none;
+}
